@@ -6,3 +6,6 @@ const person: Person = {
 };
 
 console.log(person.name);
+
+const myName: string = "Yash Terekar";
+console.log(myName);

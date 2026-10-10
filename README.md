@@ -73,47 +73,25 @@ The folder structure will grow as I progress through the topics and exercises.
 
 ## 💻 Running TypeScript Code
 
-### 1. Clone the repository
+Install the project's local tools once:
 
 ```bash
-git clone https://github.com/Yash-Terekar/Learn-TypeScript-Daily.git
-cd Learn-TypeScript-Daily
+npm install
 ```
 
-### 2. Initialize the project
-
-If you haven't already initialized the project:
+Run the introductory example:
 
 ```bash
-npm init -y
-npm install --save-dev typescript
-npx tsc --init
+npm start
 ```
 
-### 3. Create a TypeScript file
-
-For example, create `day-01/basics.ts`:
-
-```typescript
-let username: string = "Yash";
-let age: number = 22;
-let isLearning: boolean = true;
-
-console.log(username, age, isLearning);
-```
-
-### 4. Compile and run
-
-Compile the file:
+The workspace also configures the Code Runner extension to run `.ts` and
+`.tsx` files with `tsx`. Use Code Runner's **Run Code** command or run a file
+directly with `npx tsx "path/to/file.ts"`. Code Runner executes the code but
+does not type-check it; check TypeScript errors with:
 
 ```bash
-npx tsc day-01/basics.ts --outDir dist
-```
-
-Run the generated JavaScript:
-
-```bash
-node dist/basics.js
+npm run typecheck
 ```
 
 ## 📈 Daily Practice Approach

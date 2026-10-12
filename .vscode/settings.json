@@ -2,6 +2,6 @@
   "code-runner.cwd": "$workspaceRoot",
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
-    "typescript": "tsc --project \"$workspaceRoot\\tsconfig.json\"; if ($LASTEXITCODE -eq 0) { node .\\dist\\$relativeFileDirname\\$fileNameWithoutExt.js\" }"
+    "typescript": "tsc --project tsconfig.json; if ($LASTEXITCODE -eq 0) { $relativeDir = (Resolve-Path -Relative $dir).Substring(2); node (Join-Path (Join-Path (Get-Location) 'dist') (Join-Path $relativeDir '$fileNameWithoutExt.js')) }"
   }
 }

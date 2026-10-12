@@ -53,19 +53,20 @@ _The roadmap may evolve as I learn and apply new concepts._
 
 ```text
 Learn-TypeScript-Daily/
-├── day-01/
-│   ├── basics.ts
-│   ├── arrays.ts
-│   ├── objects.ts
-│   └── challenges.ts
-├── day-02/
-│   ├── type-aliases.ts
-│   ├── interfaces.ts
-│   └── challenges.ts
-├── day-03/
-│   ├── functions.ts
-│   ├── generics.ts
-│   └── react-practice/
+├── src/
+│   ├── 01-fundamentals
+│   │   ├── arrays.ts
+│   │   ├── objects.ts
+│   │   └── challenges.ts
+│   │
+│   ├── 02-
+│   │   ├── interfaces.ts
+│   │   ├── functions.ts
+│   │   └── react-practice/
+│   │
+│   └── 03-
+│
+├── tsconfig.json
 └── README.md
 ```
 
@@ -73,26 +74,26 @@ The folder structure will grow as I progress through the topics and exercises.
 
 ## 💻 Running TypeScript Code
 
-Install the project's local tools once:
+Install Node.js and the TypeScript compiler globally; this repository does not
+need a `package.json` or local `node_modules`:
 
 ```bash
-npm install
+npm install --global typescript
 ```
 
-Run the introductory example:
+Compile the project and run the introductory example:
 
 ```bash
-npm start
+tsc --project .
+node dist/index.js
 ```
 
-The workspace also configures the Code Runner extension to run `.ts` and
-`.tsx` files with `tsx`. Use Code Runner's **Run Code** command or run a file
-directly with `npx tsx "path/to/file.ts"`. Code Runner executes the code but
-does not type-check it; check TypeScript errors with:
-
-```bash
-npm run typecheck
-```
+JavaScript output is written to `dist/` without source map files, preserving
+the source file's folder structure. The workspace also configures the Code
+Runner extension to compile with `tsc` and then run the emitted JavaScript for
+the active `.ts` file, whether it is in the workspace root or a subfolder.
+Code Runner's **Run Code** command requires the Code Runner VS Code extension;
+the terminal commands above work without it.
 
 ## 📈 Daily Practice Approach
 

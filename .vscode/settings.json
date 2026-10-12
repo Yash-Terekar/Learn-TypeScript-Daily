@@ -1,0 +1,7 @@
+{
+  "code-runner.cwd": "$workspaceRoot",
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "typescript": "tsc --project \"$workspaceRoot\\tsconfig.json\"; if ($LASTEXITCODE -eq 0) { node .\\dist\\$relativeFileDirname\\$fileNameWithoutExt.js\" }"
+  }
+}
